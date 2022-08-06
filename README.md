@@ -1,6 +1,8 @@
 # Roy Moore's website
 > Personal website
 
+[![GitHub tag](https://img.shields.io/github/tag/Tranquility2/Tranquility2.github.io?include_prereleases=&sort=semver)](https://github.com/Tranquility2/Tranquility2.github.io/releases/)
+
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 
 
