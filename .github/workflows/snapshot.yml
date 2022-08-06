@@ -11,9 +11,10 @@ jobs:
   take-snapshot:
     runs-on: ubuntu-latest
     steps:
-      - name: Take the Screenshot
+      - name: Install Chrome
         uses: browser-actions/setup-chrome@latest
         # Running with --screenshot will produce a file named screenshot.png in the current working directory
+      - name: Take the Screenshot
         run: |
           chrome --headless --disable-gpu --screenshot $TARGET_URL
           ls -alh
