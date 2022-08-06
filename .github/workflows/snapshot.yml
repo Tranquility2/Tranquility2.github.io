@@ -25,5 +25,5 @@ jobs:
         with:
           message: Update Screenshot
           default_author: github_actions
-        add: $OUTPUT_FILE
+          add: $OUTPUT_FILE
 
