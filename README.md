@@ -7,7 +7,7 @@
 ## Preview
 
 <a href="https://tranquility2.github.io/">
-    <img src="sample.png"
+    <img src="screenshot.png"
         alt="Sample screenshot"
         title="Go to site"
         width="500" />

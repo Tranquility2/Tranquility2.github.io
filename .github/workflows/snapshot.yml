@@ -1,0 +1,33 @@
+# Used to screenshot a website
+name: Snapshot
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  TARGET_URL: https://tranquility2.github.io/
+
+jobs:
+  take-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          ref: master
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@latest
+        # Running with --screenshot will produce a file named screenshot.png in the current working directory
+      - name: Take the Screenshot
+        run: chrome --headless --disable-gpu --screenshot $TARGET_URL
+      - name: Debug info
+        run: |
+          ls -alh
+          pwd
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: Update Screenshot
+          default_author: github_actions
+          add: screenshot.png
+
