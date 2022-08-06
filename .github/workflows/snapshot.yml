@@ -11,18 +11,17 @@ jobs:
   take-snapshot:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Install Chrome
         uses: browser-actions/setup-chrome@latest
         # Running with --screenshot will produce a file named screenshot.png in the current working directory
       - name: Take the Screenshot
+        run: chrome --headless --disable-gpu --screenshot $TARGET_URL
+      - name: Debug info
         run: |
-          chrome --headless --disable-gpu --screenshot $TARGET_URL
           ls -alh
           pwd
-      - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: Copy file
-        run: cp ../screenshot.png .
       - uses: EndBug/add-and-commit@v9
         with:
           message: Update Screenshot
