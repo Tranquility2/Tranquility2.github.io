@@ -8,6 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
-    - name: Print test
-      run: echo "test"
+  steps:
+    - uses: browser-actions/setup-chrome@latest
+    - run: chrome --version
