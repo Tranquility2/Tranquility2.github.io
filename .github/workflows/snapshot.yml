@@ -4,6 +4,7 @@ name: Snapshot
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   test:
