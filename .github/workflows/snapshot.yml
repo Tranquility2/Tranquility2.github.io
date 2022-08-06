@@ -4,11 +4,10 @@ name: Snapshot
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
-    - uses: browser-actions/setup-chrome@latest
-    - run: chrome --version
+    steps:
+      - uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
