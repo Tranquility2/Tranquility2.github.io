@@ -1,7 +1,9 @@
 # Used to screenshot a website 
 name: Snapshot
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
 
 env:
   TARGET_URL: https://tranquility2.github.io/
