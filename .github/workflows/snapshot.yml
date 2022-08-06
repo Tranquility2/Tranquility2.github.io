@@ -1,15 +1,17 @@
-# TODO
+# Used to screenshot a website 
 name: Snapshot
 on:
   workflow_dispatch:
 
 env:
   TARGET_URL: https://tranquility2.github.io/
+  OUTPUT_FILE: screenshot.png
 
 jobs:
-  test:
+  take-snapshot:
     runs-on: ubuntu-latest
     steps:
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --headless --disable-gpu --screenshot $TARGET_URL
-      - run: ls -h
+      # Running with --screenshot will produce a file named screenshot.png in the current working directory
+      - run: ls -lh
