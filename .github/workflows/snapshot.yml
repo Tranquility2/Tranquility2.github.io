@@ -2,10 +2,14 @@
 name: Snapshot
 on:
   workflow_dispatch:
-  push:
+
+env:
+  TARGET_URL: https://tranquility2.github.io/
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: browser-actions/setup-chrome@latest
-      - run: chrome --version
+      - run: chrome --headless --disable-gpu --screenshot $TARGET_URL
+      - run: ls -h
