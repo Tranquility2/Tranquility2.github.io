@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Take the Screenshot
-        uses: browser-actions/setup-chrome@latest
-        run: chrome --headless --disable-gpu --screenshot $TARGET_URL
+        - uses: browser-actions/setup-chrome@latest
+        - run: chrome --headless --disable-gpu --screenshot $TARGET_URL
         # Running with --screenshot will produce a file named screenshot.png in the current working directory
-        run: ls -alh
+        - run: ls -alh
       - name: Checkout repo
         uses: actions/checkout@v2
