@@ -20,7 +20,7 @@ jobs:
         uses: browser-actions/setup-chrome@latest
         # Running with --screenshot will produce a file named screenshot.png in the current working directory
       - name: Take the Screenshot
-        run: chrome --headless --disable-gpu --screenshot $TARGET_URL
+        run: chrome --headless --disable-gpu --screenshot --hide-scrollbars --window-size=1024,1024 $TARGET_URL
       - name: Debug info
         run: |
           ls -alh
