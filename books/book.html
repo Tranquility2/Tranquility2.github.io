@@ -17,19 +17,7 @@
 </body>
 
 <script>
-  Object.values(books_data.books).forEach(val => {
-    $("books").before(
-      `<div class="book">
-               <div class="side spine">
-                   <span class="spine-title"> ${val.title} </span>
-                   <span class="spine-author"> ${val.author} </span>
-               </div>
-               <div class="side top"></div>
-               <div class="side cover"
-                   style="background-image: url(&quot;${val.cover}&quot;); height: 274px; top: 6px;">
-               </div>
-          </div>`);
-  });
+  populte_books("books")
 </script>
 
 <script src="bookshelf.js"></script>
