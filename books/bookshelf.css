@@ -24,15 +24,19 @@
         63deg,
         rgba(255, 255, 255, 0.1),
         rgba(255, 255, 255, 0.1) 1px,
-        transparent 4px,
+        transparent 3px,
         transparent 0
       ),
       linear-gradient(
-        63deg,
+        127deg,
         rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 1px,
-        transparent 74%,
+        rgba(255, 255, 255, 0.1) 90px,
+        transparent 55%,
         transparent 0
+      ),
+      linear-gradient(
+        transparent 51%,
+        rgba(0, 0, 0, 0.1) 170px
       );
       background-size: 70px 120px;
     --argyle: repeating-linear-gradient(

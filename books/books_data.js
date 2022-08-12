@@ -6,7 +6,7 @@ let books_json = '{ "books" : [' +
     '{ "title":"The Collected Stories of Arthur C. Clarke" , "author":"ACC" , "cover":"https://upload.wikimedia.org/wikipedia/en/d/d7/Collected_stories_clarke.jpg"},' +
     '{ "title":"Ender\'s Game" , "author":"OSC" , "cover":"https://upload.wikimedia.org/wikipedia/en/e/e4/Ender%27s_game_cover_ISBN_0312932081.jpg"} ]}';
 
-function populte_books(placeholder) {
+function populate_books(placeholder) {
     books_data = JSON.parse(books_json);
 
     Object.values(books_data.books).forEach(val => {
@@ -30,6 +30,6 @@ function populte_books(placeholder) {
     </body>
 
     <script>
-        populte_books("books")
+        populate_books("books")
     </script>
 */
